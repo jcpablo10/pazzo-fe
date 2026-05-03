@@ -27,7 +27,7 @@ const buttonClasses = computed(() => {
   switch (props.variant) {
     case 'primary':
       classes.push(
-        'bg-primary text-bg-dark',
+        'bg-primary text-on-primary-container',
         'hover:scale-[1.05] hover:shadow-[0_0_25px_rgba(37,244,37,0.5)]',
         'active:scale-95',
         'disabled:opacity-50 disabled:cursor-not-allowed disabled:bg-surface-variant disabled:text-on-surface-variant'
