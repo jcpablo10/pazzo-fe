@@ -1,0 +1,8 @@
+{
+  "home": {
+    "title": "Pazzo Frontend",
+    "subtitle": "Base Nuxt 4 + Tailwind 4 + Clean Architecture + DDD",
+    "description": "Proyecto inicial con localizacion, Pinia y testing listo para crecer.",
+    "visits": "Visitas en esta sesion"
+  }
+}
