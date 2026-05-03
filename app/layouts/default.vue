@@ -1,6 +1,6 @@
 <template>
-  <main class="min-h-screen bg-slate-50 text-slate-900">
-    <div class="mx-auto max-w-5xl px-6 py-10">
+  <main class="min-h-screen text-on">
+    <div class="mx-auto max-w-6xl px-6 py-10 sm:px-8">
       <slot />
     </div>
   </main>

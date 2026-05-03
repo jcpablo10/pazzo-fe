@@ -4,5 +4,33 @@
     "subtitle": "Nuxt 4 + Tailwind 4 + Clean Architecture + DDD baseline",
     "description": "Starter project with localization, Pinia, and testing ready to scale.",
     "visits": "Visits in this session"
+  },
+  "landing": {
+    "badge": "Digital Adventure Passport",
+    "title": "Turn every route into a stamped story",
+    "subtitle": "Pazzo turns your rides into visible progress: collect checkpoint stamps, unlock milestones, and share your growth through a gamified cycling experience.",
+    "ctaPrimary": "Create my passport",
+    "ctaSecondary": "View demo",
+    "stats": {
+      "routes": "Active routes",
+      "stamps": "Issued stamps",
+      "cities": "Connected cities"
+    },
+    "features": {
+      "passportTitle": "Passport catalog",
+      "passportBody": "Browse curated experiences by adventure type, difficulty, and city. Every passport has clear goals and real rewards.",
+      "qrTitle": "QR stamping flow",
+      "qrBody": "Scan, validate, and stamp in seconds with a guided flow optimized for speed outdoors and fraud prevention.",
+      "mapTitle": "Checkpoint map",
+      "mapBody": "Locate stations, review zone progress, and plan your next stop with real-time visual context."
+    },
+    "journeyTitle": "Your journey in 3 steps",
+    "steps": {
+      "one": "Pick a passport and set your adventure goal.",
+      "two": "Scan checkpoints to register verified stamps.",
+      "three": "Complete challenges, unlock badges, and level up."
+    },
+    "liveCardTitle": "Live activity",
+    "liveCardBody": "Visits tracked in this session"
   }
 }

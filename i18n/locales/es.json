@@ -4,5 +4,33 @@
     "subtitle": "Base Nuxt 4 + Tailwind 4 + Clean Architecture + DDD",
     "description": "Proyecto inicial con localizacion, Pinia y testing listo para crecer.",
     "visits": "Visitas en esta sesion"
+  },
+  "landing": {
+    "badge": "Pasaporte Digital de Aventuras",
+    "title": "Convierte cada ruta en una historia sellada",
+    "subtitle": "Pazzo transforma tus recorridos en progreso visible: colecciona sellos en checkpoints, desbloquea logros y comparte tu avance en una experiencia ciclista gamificada.",
+    "ctaPrimary": "Crear mi pasaporte",
+    "ctaSecondary": "Ver demo",
+    "stats": {
+      "routes": "Rutas activas",
+      "stamps": "Sellos emitidos",
+      "cities": "Ciudades conectadas"
+    },
+    "features": {
+      "passportTitle": "Catálogo de pasaportes",
+      "passportBody": "Explora experiencias curadas por tipo de aventura, dificultad y ciudad. Cada pasaporte tiene objetivos claros y recompensas reales.",
+      "qrTitle": "Flujo de sellado QR",
+      "qrBody": "Escanea, valida y sella en segundos con un flujo guiado que prioriza rapidez en terreno y prevención de fraude.",
+      "mapTitle": "Mapa de checkpoints",
+      "mapBody": "Ubica estaciones, revisa progreso por zona y planifica tu siguiente parada con contexto visual en tiempo real."
+    },
+    "journeyTitle": "Tu viaje en 3 pasos",
+    "steps": {
+      "one": "Elige un pasaporte y define tu objetivo de aventura.",
+      "two": "Escanea checkpoints para registrar sellos verificados.",
+      "three": "Completa retos, desbloquea insignias y sube de nivel."
+    },
+    "liveCardTitle": "Actividad en vivo",
+    "liveCardBody": "Visitas registradas en esta sesion"
   }
 }
