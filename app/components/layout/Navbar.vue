@@ -1,22 +1,6 @@
 <script setup lang="ts">
 // Navigation Bar Component
-import { ref, onMounted } from 'vue'
-
-const isDark = ref(true)
-
-const toggleTheme = () => {
-  isDark.value = !isDark.value
-  if (isDark.value) {
-    document.documentElement.classList.add('dark')
-  } else {
-    document.documentElement.classList.remove('dark')
-  }
-}
-
-onMounted(() => {
-  // Ensure dark mode is set on mount
-  document.documentElement.classList.add('dark')
-})
+const { isDark, toggleTheme } = useTheme()
 </script>
 
 <template>
