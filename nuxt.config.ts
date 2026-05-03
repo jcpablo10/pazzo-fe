@@ -9,7 +9,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        class: 'dark',
         lang: 'es'
       },
       link: [

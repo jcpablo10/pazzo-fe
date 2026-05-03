@@ -29,7 +29,7 @@ const emit = defineEmits<{
 
 const selectClasses = computed(() => {
   const classes = [
-    'w-full appearance-none bg-white dark:bg-surface-variant',
+    'w-full appearance-none bg-surface-variant',
     'border rounded-xl px-4 py-3 pr-10',
     'focus:ring-2 focus:ring-primary focus:border-transparent',
     'outline-none transition-all',
@@ -37,9 +37,9 @@ const selectClasses = computed(() => {
   ]
   
   if (props.error) {
-    classes.push('border-red-500 dark:border-red-400')
+    classes.push('border-red-400')
   } else {
-    classes.push('border-outline dark:border-primary/20')
+    classes.push('border-primary/20')
   }
   
   if (props.disabled) {
@@ -82,7 +82,7 @@ const handleChange = (event: Event) => {
         keyboard_arrow_down
       </span>
     </div>
-    <p v-if="error" class="mt-1 text-sm text-red-500 dark:text-red-400">
+    <p v-if="error" class="mt-1 text-sm text-red-400">
       {{ error }}
     </p>
   </div>

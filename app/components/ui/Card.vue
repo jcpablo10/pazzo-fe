@@ -25,16 +25,16 @@ const cardClasses = computed(() => {
       break
     case 'elevated':
       classes.push(
-        'bg-white dark:bg-surface-variant',
-        'border border-outline dark:border-primary/10',
+        'bg-surface-variant',
+        'border border-primary/10',
         'shadow-lg'
       )
       break
     case 'default':
     default:
       classes.push(
-        'bg-white dark:bg-surface-variant/30',
-        'border border-outline dark:border-primary/10'
+        'bg-surface-variant/30',
+        'border border-primary/10'
       )
       break
   }

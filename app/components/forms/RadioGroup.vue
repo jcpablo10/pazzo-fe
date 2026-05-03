@@ -51,7 +51,7 @@ const handleChange = (value: string | number) => {
           @change="() => handleChange(option.value)"
         />
         <div
-          class="text-center py-3 rounded-xl border border-outline dark:border-primary/20 
+          class="text-center py-3 rounded-xl border border-primary/20 
                  peer-checked:bg-primary/20 peer-checked:border-primary peer-checked:text-primary 
                  transition-all group-hover:bg-primary/5"
         >
@@ -59,7 +59,7 @@ const handleChange = (value: string | number) => {
         </div>
       </label>
     </div>
-    <p v-if="error" class="mt-1 text-sm text-red-500 dark:text-red-400">
+    <p v-if="error" class="mt-1 text-sm text-red-400">
       {{ error }}
     </p>
   </div>

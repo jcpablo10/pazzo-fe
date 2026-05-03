@@ -75,7 +75,7 @@ const clearFile = () => {
           'relative group cursor-pointer border-2 border-dashed rounded-3xl overflow-hidden',
           'flex flex-col items-center justify-center',
           'bg-primary/5 hover:bg-primary/10 transition-all',
-          error ? 'border-red-500 dark:border-red-400' : 'border-primary/20',
+          error ? 'border-red-400' : 'border-primary/20',
           aspectClasses
         ]"
       >
@@ -104,7 +104,7 @@ const clearFile = () => {
       </div>
     </div>
     
-    <p v-if="error" class="mt-1 text-sm text-red-500 dark:text-red-400">
+    <p v-if="error" class="mt-1 text-sm text-red-400">
       {{ error }}
     </p>
   </div>

@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+// Use dashboard layout
+// @ts-expect-error - Nuxt auto-import
+definePageMeta({
+  layout: 'dashboard'
+})
+
 // Types
 interface SelectOption {
   label: string
@@ -58,7 +64,7 @@ const handleDiscard = () => {
 <template>
   <div class="flex h-screen overflow-hidden">
     <!-- Sidebar Navigation -->
-    <aside class="w-64 shrink-0 border-r border-primary/10 bg-background-light dark:bg-background-dark flex flex-col">
+    <aside class="w-64 shrink-0 border-r border-primary/10 bg-background-dark flex flex-col">
       <div class="p-6 flex items-center gap-3">
         <div class="bg-primary/20 p-2 rounded-lg text-primary">
           <span class="material-symbols-outlined text-3xl">pedal_bike</span>
@@ -124,9 +130,9 @@ const handleDiscard = () => {
     </aside>
 
     <!-- Main Content -->
-    <main class="flex-1 overflow-y-auto bg-background-light dark:bg-background-dark">
+    <main class="flex-1 overflow-y-auto bg-background-dark">
       <!-- Header -->
-      <header class="h-16 border-b border-primary/10 flex items-center justify-between px-8 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+      <header class="h-16 border-b border-primary/10 flex items-center justify-between px-8 sticky top-0 bg-background-dark/80 backdrop-blur-md z-10">
         <div class="flex items-center gap-2">
           <span class="text-on-surface-variant font-medium">Pasaportes</span>
           <span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
@@ -207,7 +213,7 @@ const handleDiscard = () => {
                     type="number"
                     min="0"
                     placeholder="0"
-                    class="w-24 bg-white dark:bg-surface-variant border border-outline dark:border-primary/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none text-on-background"
+                    class="w-24 bg-surface-variant border border-primary/20 rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary outline-none text-on-background"
                   />
                   <button
                     type="button"

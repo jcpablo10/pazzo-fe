@@ -10,7 +10,6 @@
   --color-on-surface-variant: #7d9d7d;
   --color-outline: #3d5d3d;
   --color-on-background: #e8f5e8;
-  --color-background-light: #f5f8f5;
   --color-background-dark: #102210;
   
   --font-family-display: Lexend, sans-serif;
@@ -24,16 +23,10 @@
 @layer base {
   body {
     font-family: Lexend, sans-serif;
-    background-color: #f5f8f5;
-    color: rgb(15 23 42);
+    background-color: #102210;
+    color: rgb(241 245 249);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
-  }
-
-  .dark body,
-  html.dark body {
-    background-color: #102210;
-    color: rgb(241 245 249);
   }
 }
