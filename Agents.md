@@ -24,6 +24,7 @@ Este archivo define convenciones para que la IA genere código consistente en es
    - Button, Card, Badge, Avatar, Modal, Toast, etc.
 4. **Componentes de layout** van en `app/components/layout/`:
    - Navbar, Footer, Sidebar, Header, etc.
+5. Puedes actualizar la lista de componentes en el archivo components-todo.txt
 
 ### Nomenclatura
 1. Usar nombres simples en PascalCase, sin prefijos del proyecto.
