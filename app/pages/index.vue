@@ -22,10 +22,15 @@
             Explora, Rueda, Colecciona. El primer pasaporte digital para los amantes de las rutas, la libertad y los retos épicos.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="bg-primary text-background-dark px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-primary/25 hover:shadow-primary/40 transition-all flex items-center justify-center gap-2">
-              <span>Crea tu primera aventura</span>
-              <span class="material-symbols-outlined">arrow_forward</span>
-            </button>
+            <UiButton 
+              variant="primary" 
+              size="large"
+            >
+              Crea tu primera aventura
+              <template #append-icon>
+                <span class="material-symbols-outlined">arrow_forward</span>
+              </template>
+            </UiButton>
             <button class="border border-slate-700 bg-slate-800/50 backdrop-blur px-8 py-4 rounded-xl text-lg font-bold hover:bg-slate-700 transition-all flex items-center justify-center gap-2">
               <span class="material-symbols-outlined">play_circle</span>
               <span>Ver Video</span>

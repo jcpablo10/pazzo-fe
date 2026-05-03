@@ -8,23 +8,6 @@ export default {
     './app/pages/**/*.vue',
     './app/app.vue'
   ],
-  theme: {
-    extend: {
-      colors: {
-        'primary': '#25f425',
-        'background-light': '#f5f8f5',
-        'background-dark': '#102210',
-      },
-      fontFamily: {
-        'display': ['Lexend', 'sans-serif']
-      },
-      borderRadius: {
-        'DEFAULT': '0.25rem',
-        'lg': '0.5rem',
-        'xl': '0.75rem',
-        'full': '9999px'
-      },
-    }
-  },
-  plugins: []
+  // En Tailwind v4, la configuración de tema se hace en CSS con @theme
+  // Este archivo se mantiene principalmente para darkMode y content
 } satisfies Config

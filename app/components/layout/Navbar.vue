@@ -27,9 +27,12 @@ const { isDark, toggleTheme } = useTheme()
         <button class="hidden sm:block text-sm font-bold px-4 py-2 rounded-lg hover:bg-white/5 transition-all">
           Iniciar Sesión
         </button>
-        <button class="bg-primary text-background-dark px-6 py-2 rounded-lg text-sm font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
+        <ui-button 
+          variant="primary" 
+          size="small" 
+        >
           Unirse
-        </button>
+        </ui-button>
       </div>
     </div>
   </header>
