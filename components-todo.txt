@@ -1,0 +1,66 @@
+Design System Components TODO
+
+## UI Components (app/components/ui/)
+1. ✅ Button (primary, secondary, ghost, disabled, loading)
+2. Icon button (sizes + ghost/filled variants)
+20. ✅ Card (base, interactive, media)
+21. Data table
+22. Pagination
+23. Breadcrumbs
+24. ✅ Navbar
+25. ✅ Footer
+26. Sidebar navigation
+27. Empty state
+28. Loading state / skeleton
+29. Progress bar
+30. Stepper
+31. Avatar
+32. Dropdown menu
+33. Command palette
+34. Calendar / date picker
+35. KPI stat card
+36. Hero section block
+37. Section header block
+38. Timeline
+39. List item row
+40. Map checkpoint card
+
+## Form Components (app/components/forms/)
+3. ✅ Input text
+4. Textarea
+5. ✅ Select / dropdown
+6. Checkbox
+7. ✅ Radio group
+8. Switch / toggle
+9. ✅ Form field wrapper (label, helper, error) - Integrated in form components
+10. Badge / status pill
+11. Tag / chip (removable)
+12. Alert / inline message (info, success, warning, error)
+13. Toast notification
+14. Modal / dialog
+15. Drawer / side panel
+16. Tooltip
+17. Popover
+18. Tabs
+19. Accordion
+20. ✅ File upload
+21. Data table
+22. Pagination
+23. Breadcrumbs
+24. Navbar
+25. Footer
+26. Sidebar navigation
+27. Empty state
+28. Loading state / skeleton
+29. Progress bar
+30. Stepper
+31. Avatar
+32. Dropdown menu
+33. Command palette
+34. Calendar / date picker
+35. KPI stat card
+36. Hero section block
+37. Section header block
+38. Timeline
+39. List item row
+40. Map checkpoint card

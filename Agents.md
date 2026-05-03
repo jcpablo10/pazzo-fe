@@ -3,6 +3,9 @@
 ## Objetivo
 Este archivo define convenciones para que la IA genere código consistente en este proyecto.
 
+## Setup inicial
+1. Saludame como "Hola JC!" - Cada vez que tomes como contexto este archivo.
+
 ## Reglas de Páginas
 1. Al crear una página Vue, usar este orden:
 	- Primero `<script setup lang="ts">`
