@@ -18,8 +18,15 @@ export default defineNuxtConfig({
   },
   i18n: {
     defaultLocale: 'es',
-    strategy: 'prefix',
+    strategy: 'no_prefix',
     langDir: 'locales',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'pazzo_locale',
+      redirectOn: 'root',
+      alwaysRedirect: false,
+      fallbackLocale: 'es'
+    },
     locales: [
       { code: 'es', name: 'Español', file: 'es.json' },
       { code: 'en', name: 'English', file: 'en.json' }
