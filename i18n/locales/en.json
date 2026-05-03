@@ -32,5 +32,152 @@
     },
     "liveCardTitle": "Live activity",
     "liveCardBody": "Visits tracked in this session"
+  },
+  "site": {
+    "subtitle": "Digital Passport",
+    "nav": {
+      "home": "Home",
+      "product": "Product",
+      "catalog": "Catalog",
+      "passportDetail": "Detail",
+      "createPassport": "Create",
+      "map": "Map",
+      "qrFlow": "QR Flow",
+      "logo": "Logo",
+      "styleGuide": "Style Guide",
+      "prd": "PRD",
+      "openMenu": "Menu",
+      "closeMenu": "Close",
+      "mobileTitle": "Navigation"
+    },
+    "footer": {
+      "description": "Platform to create and complete cycling passports through gamified experiences.",
+      "product": "Product",
+      "legal": "Legal",
+      "copy": "Pazzo 2026. All rights reserved.",
+      "items": {
+        "passports": "Passport catalog and detail",
+        "checkpoints": "QR stamping and checkpoints",
+        "analytics": "Dashboard and tracking"
+      }
+    }
+  },
+  "pages": {
+    "product": {
+      "heroBadge": "Product Landing",
+      "title": "A product built for riders, brands, and cities",
+      "subtitle": "Coordinate routes, checkpoints, and rewards in one digital journey with visible progress.",
+      "primaryCta": "Request demo",
+      "secondaryCta": "View full flow",
+      "points": {
+        "one": "Create experiences by season and territory.",
+        "two": "Measure conversion and return rate per passport.",
+        "three": "Activate community with weekly challenges and badges."
+      }
+    },
+    "catalog": {
+      "badge": "Passport Catalog",
+      "title": "Choose your next adventure",
+      "subtitle": "Each passport combines checkpoints, difficulty level, and rewards to drive new rides.",
+      "viewDetail": "View detail",
+      "cards": {
+        "coast": {
+          "level": "Intermediate",
+          "title": "North Coast 120K",
+          "description": "Three-stage scenic route with coastal checkpoint stamps and early-completion bonuses."
+        },
+        "mountain": {
+          "level": "Advanced",
+          "title": "Mountain Climb",
+          "description": "Ascent challenge with viewpoint checkpoints and an exclusive badge for total elevation gain."
+        },
+        "urban": {
+          "level": "Starter",
+          "title": "Urban Circuit",
+          "description": "Explore iconic city zones, ideal for new riders and branded activations."
+        }
+      }
+    },
+    "passportDetail": {
+      "badge": "Passport Detail",
+      "title": "North Coast 120K",
+      "subtitle": "Complete 12 verified checkpoints to unlock physical rewards and local ranking.",
+      "start": "Start passport",
+      "share": "Share route",
+      "subtitles": {
+        "coast": "Complete 12 verified checkpoints to unlock physical rewards and local ranking.",
+        "mountain": "High-elevation challenge with timed segments and stamps at demanding viewpoint checkpoints.",
+        "urban": "Urban ride to collect stamps at iconic spots and discover safer community-friendly routes."
+      },
+      "kpis": {
+        "checkpoints": "Checkpoints",
+        "elevation": "Elevation",
+        "completion": "Average completion"
+      }
+    },
+    "createPassport": {
+      "badge": "Dashboard",
+      "title": "Create Passport",
+      "subtitle": "Define goal, territory, and checkpoints to launch a new experience in minutes.",
+      "previewTitle": "Preview",
+      "previewBody": "Quickly verify structure, difficulty, and rewards before publishing.",
+      "form": {
+        "title": "Base data",
+        "name": "Passport name",
+        "city": "City or territory",
+        "difficulty": "Difficulty level",
+        "submit": "Save draft"
+      }
+    },
+    "map": {
+      "badge": "Dashboard",
+      "title": "Checkpoint Map",
+      "subtitle": "Visualize real-time status and stamp coverage by area.",
+      "mapPlaceholder": "Interactive checkpoint map",
+      "sidebarTitle": "Suggested stops",
+      "stops": {
+        "one": "Main Square - high activity",
+        "two": "Valley Viewpoint - medium climb",
+        "three": "Linear Park - ideal for new riders"
+      }
+    },
+    "qr": {
+      "badge": "Operational Flow",
+      "title": "QR Stamping Flow",
+      "subtitle": "Validate checkpoint presence and register stamps with anti-fraud checks.",
+      "scanCard": "Scan",
+      "flowTitle": "Flow steps",
+      "steps": {
+        "one": "Scan checkpoint code",
+        "two": "Validate location and time window",
+        "three": "Confirm stamp and update progress"
+      }
+    },
+    "styleGuide": {
+      "badge": "Design System",
+      "title": "Pazzo Style Guide",
+      "subtitle": "Visual tokens, typography, and base components to keep product consistency.",
+      "colors": "Colors",
+      "typography": "Typography",
+      "components": "Components"
+    },
+    "logo": {
+      "badge": "Identity",
+      "title": "Pazzo Logo",
+      "subtitle": "Main symbol version for app surfaces, brand material, and community activations."
+    },
+    "prd": {
+      "badge": "Documentation",
+      "title": "PRD: Digital Adventure Passport",
+      "subtitle": "Executive summary of problem, value proposition, and target metrics.",
+      "blocks": {
+        "problemTitle": "Problem",
+        "problemBody": "Riders lack an engaging way to track progress and discover routes with meaningful context.",
+        "solutionTitle": "Solution",
+        "solutionBody": "A digital passport with QR stamping, challenges, and checkpoint map to increase retention.",
+        "metricsTitle": "Metrics",
+        "metricsBody": "Weekly retention, completed passports, stamping frequency, and conversion to physical events."
+      }
+    }
   }
 }

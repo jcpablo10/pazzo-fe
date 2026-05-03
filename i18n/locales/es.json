@@ -32,5 +32,152 @@
     },
     "liveCardTitle": "Actividad en vivo",
     "liveCardBody": "Visitas registradas en esta sesion"
+  },
+  "site": {
+    "subtitle": "Pasaporte Digital",
+    "nav": {
+      "home": "Inicio",
+      "product": "Producto",
+      "catalog": "Catalogo",
+      "passportDetail": "Detalle",
+      "createPassport": "Crear",
+      "map": "Mapa",
+      "qrFlow": "Sellado QR",
+      "logo": "Logo",
+      "styleGuide": "Guia de Estilo",
+      "prd": "PRD",
+      "openMenu": "Menu",
+      "closeMenu": "Cerrar",
+      "mobileTitle": "Navegacion"
+    },
+    "footer": {
+      "description": "Plataforma para crear y completar pasaportes ciclistas con experiencias gamificadas.",
+      "product": "Producto",
+      "legal": "Legal",
+      "copy": "Pazzo 2026. Todos los derechos reservados.",
+      "items": {
+        "passports": "Catalogo y detalle de pasaportes",
+        "checkpoints": "Sellado QR y checkpoints",
+        "analytics": "Dashboard y seguimiento"
+      }
+    }
+  },
+  "pages": {
+    "product": {
+      "heroBadge": "Landing de Producto",
+      "title": "Un producto pensado para ciclistas, marcas y ciudades",
+      "subtitle": "Coordina rutas, checkpoints y recompensas en una sola experiencia digital con narrativa de progreso.",
+      "primaryCta": "Solicitar demo",
+      "secondaryCta": "Ver flujo completo",
+      "points": {
+        "one": "Crea experiencias por temporada y territorios.",
+        "two": "Mide conversion y recurrencia por pasaporte.",
+        "three": "Activa comunidad con retos y logros semanales."
+      }
+    },
+    "catalog": {
+      "badge": "Catalogo de Pasaportes",
+      "title": "Elige tu siguiente aventura",
+      "subtitle": "Cada pasaporte combina checkpoints, nivel de dificultad y recompensas para impulsar nuevas rutas.",
+      "viewDetail": "Ver detalle",
+      "cards": {
+        "coast": {
+          "level": "Intermedio",
+          "title": "Costa Norte 120K",
+          "description": "Ruta panoramica de 3 etapas con sellado en puntos costeros y bonos por completitud temprana."
+        },
+        "mountain": {
+          "level": "Avanzado",
+          "title": "Alto de la Montania",
+          "description": "Desafio de ascenso con checkpoints en miradores y badge exclusivo por desnivel acumulado."
+        },
+        "urban": {
+          "level": "Inicio",
+          "title": "Circuito Urbano",
+          "description": "Explora zonas iconicas de la ciudad, ideal para nuevos riders y activaciones de marca."
+        }
+      }
+    },
+    "passportDetail": {
+      "badge": "Detalle del Pasaporte",
+      "title": "Costa Norte 120K",
+      "subtitle": "Completa 12 checkpoints verificados para desbloquear recompensas fisicas y ranking local.",
+      "start": "Comenzar pasaporte",
+      "share": "Compartir ruta",
+      "subtitles": {
+        "coast": "Completa 12 checkpoints verificados para desbloquear recompensas fisicas y ranking local.",
+        "mountain": "Desafio de gran desnivel con segmentos cronometrados y sellado en miradores de alta exigencia.",
+        "urban": "Recorrido urbano para sumar sellos en puntos iconicos y descubrir rutas seguras para la comunidad."
+      },
+      "kpis": {
+        "checkpoints": "Checkpoints",
+        "elevation": "Desnivel",
+        "completion": "Progreso promedio"
+      }
+    },
+    "createPassport": {
+      "badge": "Dashboard",
+      "title": "Crear Pasaporte",
+      "subtitle": "Define objetivo, territorio y checkpoints para lanzar una experiencia nueva en minutos.",
+      "previewTitle": "Vista previa",
+      "previewBody": "Verifica rapidamente estructura, dificultad y recompensas antes de publicar.",
+      "form": {
+        "title": "Datos base",
+        "name": "Nombre del pasaporte",
+        "city": "Ciudad o territorio",
+        "difficulty": "Nivel de dificultad",
+        "submit": "Guardar borrador"
+      }
+    },
+    "map": {
+      "badge": "Dashboard",
+      "title": "Mapa de Checkpoints",
+      "subtitle": "Visualiza estado en tiempo real y cobertura de sellado por zona.",
+      "mapPlaceholder": "Mapa interactivo de checkpoints",
+      "sidebarTitle": "Paradas sugeridas",
+      "stops": {
+        "one": "Plaza Mayor - alta actividad",
+        "two": "Mirador del Valle - pendiente media",
+        "three": "Parque Lineal - ideal para nuevos riders"
+      }
+    },
+    "qr": {
+      "badge": "Flujo Operativo",
+      "title": "Flujo de Sellado QR",
+      "subtitle": "Valida presencia en checkpoint y registra sellos con seguridad antifraude.",
+      "scanCard": "Escaneo",
+      "flowTitle": "Pasos del flujo",
+      "steps": {
+        "one": "Escanear codigo del checkpoint",
+        "two": "Validar ubicacion y ventana horaria",
+        "three": "Confirmar sello y actualizar progreso"
+      }
+    },
+    "styleGuide": {
+      "badge": "Sistema de Diseno",
+      "title": "Guia de Estilo Pazzo",
+      "subtitle": "Tokens visuales, tipografia y componentes base para mantener consistencia de producto.",
+      "colors": "Colores",
+      "typography": "Tipografia",
+      "components": "Componentes"
+    },
+    "logo": {
+      "badge": "Identidad",
+      "title": "Pazzo Logo",
+      "subtitle": "Version principal del isotipo para aplicaciones, material de marca y activaciones de comunidad."
+    },
+    "prd": {
+      "badge": "Documentacion",
+      "title": "PRD: Pasaporte Digital de Aventuras",
+      "subtitle": "Resumen ejecutivo del problema, propuesta de valor y metricas objetivo.",
+      "blocks": {
+        "problemTitle": "Problema",
+        "problemBody": "Los ciclistas no tienen una forma atractiva de registrar progreso ni de descubrir rutas con contexto.",
+        "solutionTitle": "Solucion",
+        "solutionBody": "Un pasaporte digital con sellado QR, retos y mapa de checkpoints para activar recurrencia.",
+        "metricsTitle": "Metricas",
+        "metricsBody": "Retencion semanal, pasaportes completados, frecuencia de sellado y conversion a eventos fisicos."
+      }
+    }
   }
 }
