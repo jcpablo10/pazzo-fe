@@ -1,13 +1,29 @@
 <script setup lang="ts">
 // Navigation Bar Component
+import { ref, onMounted } from 'vue'
+
+const isDark = ref(true)
+
+const toggleTheme = () => {
+  isDark.value = !isDark.value
+  if (isDark.value) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}
+
+onMounted(() => {
+  // Ensure dark mode is set on mount
+  document.documentElement.classList.add('dark')
+})
 </script>
 
 <template>
   <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-3 text-primary">
-        <span class="material-symbols-outlined text-3xl">pedal_bike</span>
-        <h2 class="text-xl font-bold tracking-tight">Enbiciados</h2>
+        <img src="../../assets/pazzo/pazzo.logo.png" alt="">
       </div>
       <nav class="hidden md:flex items-center gap-10">
         <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Ciclismo</a>
@@ -16,6 +32,14 @@
         <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Aventuras</a>
       </nav>
       <div class="flex items-center gap-4">
+        <button 
+          @click="toggleTheme" 
+          class="size-10 rounded-lg flex items-center justify-center hover:bg-white/5 transition-all"
+          :aria-label="isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
+        >
+          <span v-if="isDark" class="material-symbols-outlined text-xl">light_mode</span>
+          <span v-else class="material-symbols-outlined text-xl">dark_mode</span>
+        </button>
         <button class="hidden sm:block text-sm font-bold px-4 py-2 rounded-lg hover:bg-white/5 transition-all">
           Iniciar Sesión
         </button>

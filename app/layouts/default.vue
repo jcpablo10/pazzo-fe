@@ -4,11 +4,11 @@
 
 <template>
   <div class="relative flex min-h-screen flex-col">
-    <Navbar />
+    <LayoutNavbar />
     
     <!-- Page Content -->
     <slot />
     
-    <Footer />
+    <LayoutFooter />
   </div>
 </template>

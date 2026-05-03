@@ -1,1 +1,24 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #25f425;
+    --color-background-light: #f5f8f5;
+    --color-background-dark: #102210;
+  }
+  
+  body {
+    font-family: Lexend, sans-serif;
+    background-color: #f5f8f5;
+    color: rgb(15 23 42);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  .dark body,
+  html.dark body {
+    background-color: #102210;
+    color: rgb(241 245 249);
+  }
+}
