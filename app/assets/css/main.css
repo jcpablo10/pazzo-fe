@@ -1,34 +1,90 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&display=swap");
 
 :root {
-	--pazzo-bg: #0c160a;
-	--pazzo-bg-deep: #071006;
-	--pazzo-surface: rgba(24, 34, 21, 0.7);
-	--pazzo-border: #3c4b36;
-	--pazzo-primary: #25f425;
-	--pazzo-on: #dae6d1;
-	--pazzo-on-muted: #baccb1;
-	--pazzo-on-subtle: #85967d;
+	--pazzo-surface: #0c160a;
+	--pazzo-surface-dim: #0c160a;
+	--pazzo-surface-bright: #323c2d;
+	--pazzo-surface-container-lowest: #071006;
+	--pazzo-surface-container-low: #141e11;
+	--pazzo-surface-container: #182215;
+	--pazzo-surface-container-high: #232d1f;
+	--pazzo-surface-container-highest: #2d3829;
+	--pazzo-on-surface: #dae6d1;
+	--pazzo-on-surface-variant: #baccb1;
+	--pazzo-inverse-surface: #dae6d1;
+	--pazzo-inverse-on-surface: #293325;
+	--pazzo-outline: #85967d;
+	--pazzo-outline-variant: #3c4b36;
+	--pazzo-surface-tint: #00e614;
+	--pazzo-primary: #c5ffb3;
 	--pazzo-on-primary: #003a01;
+	--pazzo-primary-container: #25f425;
+	--pazzo-on-primary-container: #006a03;
+	--pazzo-inverse-primary: #006e04;
+	--pazzo-secondary: #b6cdb1;
+	--pazzo-on-secondary: #223521;
+	--pazzo-secondary-container: #384c36;
+	--pazzo-on-secondary-container: #a5bba0;
+	--pazzo-tertiary: #ffece9;
+	--pazzo-on-tertiary: #4a2722;
+	--pazzo-tertiary-container: #ffc6be;
+	--pazzo-on-tertiary-container: #7b504a;
+	--pazzo-error: #ffb4ab;
+	--pazzo-on-error: #690005;
+	--pazzo-error-container: #93000a;
+	--pazzo-on-error-container: #ffdad6;
+	--pazzo-primary-fixed: #76ff64;
+	--pazzo-primary-fixed-dim: #00e614;
+	--pazzo-on-primary-fixed: #002200;
+	--pazzo-on-primary-fixed-variant: #005302;
+	--pazzo-secondary-fixed: #d2e9cc;
+	--pazzo-secondary-fixed-dim: #b6cdb1;
+	--pazzo-on-secondary-fixed: #0e1f0e;
+	--pazzo-on-secondary-fixed-variant: #384c36;
+	--pazzo-tertiary-fixed: #ffdad5;
+	--pazzo-tertiary-fixed-dim: #f1b9b1;
+	--pazzo-on-tertiary-fixed: #31120f;
+	--pazzo-on-tertiary-fixed-variant: #643c37;
+	--pazzo-background: #0c160a;
+	--pazzo-on-background: #dae6d1;
+	--pazzo-surface-variant: #2d3829;
 }
 
 body {
 	font-family: "Lexend", sans-serif;
 	background:
-		radial-gradient(circle at 0% 0%, rgba(37, 244, 37, 0.16), transparent 30%),
-		linear-gradient(180deg, var(--pazzo-bg), var(--pazzo-bg-deep));
-	color: var(--pazzo-on);
+		radial-gradient(circle at 0% 0%, rgba(0, 230, 20, 0.16), transparent 30%),
+		linear-gradient(180deg, var(--pazzo-background), var(--pazzo-surface-container-lowest));
+	color: var(--pazzo-on-surface);
 }
 
 .heading-display {
-	font-family: "Playfair Display", serif;
+	font-family: "Lexend", sans-serif;
 }
 
 .glass-panel {
-	border-color: color-mix(in srgb, var(--pazzo-border) 70%, transparent);
-	background: color-mix(in srgb, var(--pazzo-surface) 86%, transparent);
+	border-color: color-mix(in srgb, var(--pazzo-outline-variant) 70%, transparent);
+	background: color-mix(in srgb, var(--pazzo-surface-container) 86%, transparent);
 	backdrop-filter: blur(16px);
 	box-shadow: 0 16px 60px rgba(0, 0, 0, 0.32);
+}
+
+.ds-card {
+	border: 1px solid color-mix(in srgb, var(--pazzo-outline-variant) 80%, transparent);
+	border-radius: 1rem;
+	background: color-mix(in srgb, var(--pazzo-surface-container-high) 70%, transparent);
+	transition: border-color 200ms ease;
+}
+
+.ds-card:hover {
+	border-color: color-mix(in srgb, var(--pazzo-primary-container) 50%, transparent);
+}
+
+.ds-badge {
+	border-radius: 9999px;
+	border: 1px solid color-mix(in srgb, var(--pazzo-primary) 20%, transparent);
+	background: color-mix(in srgb, var(--pazzo-primary) 10%, transparent);
+	color: var(--pazzo-primary);
 }
