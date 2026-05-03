@@ -1,6 +1,6 @@
-@import "tailwindcss";
-
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&display=swap");
+
+@import "tailwindcss";
 
 :root {
 	--pazzo-surface: #0c160a;
