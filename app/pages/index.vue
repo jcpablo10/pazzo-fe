@@ -31,10 +31,15 @@
                 <span class="material-symbols-outlined">arrow_forward</span>
               </template>
             </UiButton>
-            <button class="border border-slate-700 bg-slate-800/50 backdrop-blur px-8 py-4 rounded-xl text-lg font-bold hover:bg-slate-700 transition-all flex items-center justify-center gap-2">
-              <span class="material-symbols-outlined">play_circle</span>
-              <span>Ver Video</span>
-            </button>
+            <UiButton 
+              variant="ghost" 
+              size="large"
+            >
+              <template #prepend-icon>
+                <span class="material-symbols-outlined">play_circle</span>
+              </template>
+              Ver Video
+            </UiButton>
           </div>
         </div>
         <div class="relative h-125 lg:h-150 w-full rounded-2xl overflow-hidden shadow-2xl shadow-primary/10 border border-primary/20">
@@ -127,9 +132,13 @@
           Únete a la comunidad de ciclistas y aventureros más grande y empieza a coleccionar logros hoy mismo. Es gratis y para siempre.
         </p>
         <div class="w-full max-w-md">
-          <button class="w-full bg-primary text-background-dark px-10 py-5 rounded-2xl text-xl font-black shadow-2xl shadow-primary/30 hover:scale-[1.02] active:scale-[0.98] transition-all">
+          <UiButton 
+            variant="primary" 
+            size="large"
+            class="w-full text-xl"
+          >
             Crea tu primera aventura
-          </button>
+          </UiButton>
           <p class="mt-6 text-sm text-slate-500 font-medium uppercase tracking-widest">Disponible en iOS y Android</p>
         </div>
       </div>

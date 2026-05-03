@@ -16,14 +16,14 @@ const { isDark, toggleTheme } = useTheme()
         <a class="hover:text-primary" href="#">Contacto</a>
       </div>
       <div class="flex gap-4">
-        <button 
+        <!-- <button 
           @click="toggleTheme" 
           class="size-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-primary/10 hover:border-primary/40 transition-all cursor-pointer"
           :aria-label="isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
         >
           <span v-if="isDark" class="material-symbols-outlined text-xl">light_mode</span>
           <span v-else class="material-symbols-outlined text-xl">dark_mode</span>
-        </button>
+        </button> -->
         <div class="size-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-primary/10 hover:border-primary/40 transition-all cursor-pointer">
           <span class="material-symbols-outlined text-xl">share</span>
         </div>

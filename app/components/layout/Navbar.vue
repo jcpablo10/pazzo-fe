@@ -16,14 +16,14 @@ const { isDark, toggleTheme } = useTheme()
         <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Aventuras</a>
       </nav>
       <div class="flex items-center gap-4">
-        <button 
+        <!-- <button 
           @click="toggleTheme" 
           class="size-10 rounded-lg flex items-center justify-center hover:bg-white/5 transition-all"
           :aria-label="isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
         >
           <span v-if="isDark" class="material-symbols-outlined text-xl">light_mode</span>
           <span v-else class="material-symbols-outlined text-xl">dark_mode</span>
-        </button>
+        </button> -->
         <button class="hidden sm:block text-sm font-bold px-4 py-2 rounded-lg hover:bg-white/5 transition-all">
           Iniciar Sesión
         </button>
