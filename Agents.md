@@ -82,6 +82,81 @@ Las siguientes variables están definidas en `app/assets/css/main.css`:
 - Tipografía: `font-family-display` (Lexend)
 - Border radius: `radius-lg`, `radius-xl`
 
+## Reglas de Iconos
+
+### Material Symbols Outlined
+El proyecto usa **Material Symbols Outlined** de Google Fonts, que ya está configurado en `nuxt.config.ts`.
+
+### Cómo usar iconos
+1. Usar el elemento `<span>` con la clase `material-symbols-outlined`
+2. El nombre del icono va como contenido de texto del elemento
+3. Aplicar clases de Tailwind para color y tamaño
+
+Ejemplo básico:
+```vue
+<span class="material-symbols-outlined">
+  home
+</span>
+```
+
+Ejemplo con estilos:
+```vue
+<span class="material-symbols-outlined text-primary text-2xl">
+  settings
+</span>
+```
+
+### Variantes de iconos
+Puedes controlar el peso (weight) y relleno (fill) usando `font-variation-settings`:
+
+```vue
+<!-- Icono relleno -->
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">
+  favorite
+</span>
+
+<!-- Icono con peso personalizado -->
+<span class="material-symbols-outlined" style="font-variation-settings: 'wght' 700;">
+  star
+</span>
+```
+
+### Catálogo de iconos disponibles
+📚 **Lista completa de iconos**: [Google Material Symbols](https://fonts.google.com/icons?icon.set=Material+Symbols)
+
+- Busca por nombre o categoría
+- Filtra por estilo: Outlined (el que usamos)
+- Copia el nombre del icono y úsalo directamente
+
+### Iconos comunes en el proyecto
+```vue
+<!-- Navegación -->
+<span class="material-symbols-outlined">menu</span>
+<span class="material-symbols-outlined">close</span>
+<span class="material-symbols-outlined">arrow_back</span>
+
+<!-- Acciones -->
+<span class="material-symbols-outlined">edit</span>
+<span class="material-symbols-outlined">delete</span>
+<span class="material-symbols-outlined">save</span>
+
+<!-- Formularios -->
+<span class="material-symbols-outlined">mail</span>
+<span class="material-symbols-outlined">lock</span>
+<span class="material-symbols-outlined">visibility</span>
+<span class="material-symbols-outlined">visibility_off</span>
+
+<!-- Estado -->
+<span class="material-symbols-outlined">check_circle</span>
+<span class="material-symbols-outlined">error</span>
+<span class="material-symbols-outlined">info</span>
+
+<!-- Utilidad -->
+<span class="material-symbols-outlined">help</span>
+<span class="material-symbols-outlined">language</span>
+<span class="material-symbols-outlined">search</span>
+```
+
 ## Reglas de Layouts
 1. **Layout `default`**: Para páginas públicas/landing (incluye Navbar y Footer).
 2. **Layout `dashboard`**: Para páginas de administración con sidebar (solo aplica fondo, sin Navbar/Footer).
