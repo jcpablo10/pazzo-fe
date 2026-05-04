@@ -62,97 +62,28 @@ const handleDiscard = () => {
 </script>
 
 <template>
-  <div class="flex h-screen overflow-hidden">
-    <!-- Sidebar Navigation -->
-    <aside class="w-64 shrink-0 border-r border-primary/10 bg-background-dark flex flex-col">
-      <div class="p-6 flex items-center gap-3">
-        <div class="bg-primary/20 p-2 rounded-lg text-primary">
-          <span class="material-symbols-outlined text-3xl">pedal_bike</span>
-        </div>
-        <h2 class="text-xl font-bold tracking-tight text-on-background">Enbiciados</h2>
-      </div>
+  <!-- Header -->
+  <header class="h-16 border-b border-primary/10 flex items-center justify-between px-8 sticky top-0 bg-background-dark/80 backdrop-blur-md z-10">
+    <div class="flex items-center gap-2">
+      <span class="text-on-surface-variant font-medium">Pasaportes</span>
+      <span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
+      <span class="font-semibold text-primary">Crear Nuevo</span>
+    </div>
+    
+    <div class="flex items-center gap-4">
+      <button class="p-2 rounded-full hover:bg-primary/10 text-on-surface-variant transition-colors relative">
+        <span class="material-symbols-outlined">notifications</span>
+        <span class="absolute top-2 right-2 size-2 bg-primary rounded-full shadow-[0_0_10px_rgba(37,244,37,0.3)]"></span>
+      </button>
       
-      <nav class="flex-1 px-4 py-4 space-y-2">
-        <NuxtLink
-          to="/dashboard"
-          class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/10 hover:text-primary rounded-xl transition-all"
-        >
-          <span class="material-symbols-outlined">dashboard</span>
-          <span class="font-medium">Dashboard</span>
-        </NuxtLink>
-        
-        <NuxtLink
-          to="/crear-pasaporte"
-          class="flex items-center gap-3 px-4 py-3 bg-primary text-on-primary-container rounded-xl transition-all shadow-[0_0_10px_rgba(37,244,37,0.3)]"
-        >
-          <span class="material-symbols-outlined">confirmation_number</span>
-          <span class="font-medium">Pasaportes</span>
-        </NuxtLink>
-        
-        <NuxtLink
-          to="/rutas"
-          class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/10 hover:text-primary rounded-xl transition-all"
-        >
-          <span class="material-symbols-outlined">map</span>
-          <span class="font-medium">Rutas</span>
-        </NuxtLink>
-        
-        <NuxtLink
-          to="/ciclistas"
-          class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/10 hover:text-primary rounded-xl transition-all"
-        >
-          <span class="material-symbols-outlined">group</span>
-          <span class="font-medium">Ciclistas</span>
-        </NuxtLink>
-        
-        <NuxtLink
-          to="/ajustes"
-          class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-primary/10 hover:text-primary rounded-xl transition-all"
-        >
-          <span class="material-symbols-outlined">settings</span>
-          <span class="font-medium">Ajustes</span>
-        </NuxtLink>
-      </nav>
-      
-      <div class="p-4 mt-auto">
-        <div class="p-4 bg-primary/5 rounded-2xl border border-primary/10">
-          <div class="flex items-center gap-3 mb-3">
-            <div class="size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden">
-              <span class="material-symbols-outlined text-primary">person</span>
-            </div>
-            <div>
-              <p class="text-sm font-bold text-on-background">Admin Pro</p>
-              <p class="text-xs text-primary">Organizador Senior</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </aside>
+      <button class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 text-sm font-medium hover:bg-primary/5 transition-colors">
+        <span class="material-symbols-outlined text-lg">add_circle</span>
+        Nuevo Proyecto
+      </button>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main class="flex-1 overflow-y-auto bg-background-dark">
-      <!-- Header -->
-      <header class="h-16 border-b border-primary/10 flex items-center justify-between px-8 sticky top-0 bg-background-dark/80 backdrop-blur-md z-10">
-        <div class="flex items-center gap-2">
-          <span class="text-on-surface-variant font-medium">Pasaportes</span>
-          <span class="material-symbols-outlined text-sm text-on-surface-variant">chevron_right</span>
-          <span class="font-semibold text-primary">Crear Nuevo</span>
-        </div>
-        
-        <div class="flex items-center gap-4">
-          <button class="p-2 rounded-full hover:bg-primary/10 text-on-surface-variant transition-colors relative">
-            <span class="material-symbols-outlined">notifications</span>
-            <span class="absolute top-2 right-2 size-2 bg-primary rounded-full shadow-[0_0_10px_rgba(37,244,37,0.3)]"></span>
-          </button>
-          
-          <button class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-primary/20 text-sm font-medium hover:bg-primary/5 transition-colors">
-            <span class="material-symbols-outlined text-lg">add_circle</span>
-            Nuevo Proyecto
-          </button>
-        </div>
-      </header>
-
-      <!-- Form Content -->
+  <!-- Form Content -->
       <div class="max-w-4xl mx-auto px-8 py-12">
         <div class="mb-10">
           <h1 class="text-4xl font-black tracking-tight text-on-background mb-2">
@@ -259,6 +190,4 @@ const handleDiscard = () => {
           </div>
         </form>
       </div>
-    </main>
-  </div>
 </template>

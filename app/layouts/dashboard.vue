@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="min-h-screen bg-background-dark">
-    <!-- <layout-sidebar /> -->
-    <main class="flex-1 overflow-auto">
+  <div class="flex h-screen overflow-hidden">
+    <LayoutSidebar />
+    <main class="flex-1 overflow-y-auto bg-background-dark">
       <slot />
     </main>
   </div>
