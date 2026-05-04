@@ -1,0 +1,422 @@
+{
+  "metadata": {
+    "lastUpdated": "2026-05-03",
+    "totalComponents": 40,
+    "completedComponents": 9,
+    "description": "Lista de componentes del design system de Pazzo"
+  },
+  "categories": {
+    "ui": {
+      "name": "Componentes UI",
+      "path": "app/components/ui/",
+      "description": "Componentes de interfaz de usuario generales",
+      "components": [
+        {
+          "id": "ui-001",
+          "name": "Button",
+          "fileName": "Button.vue",
+          "nuxtName": "UiButton",
+          "path": "app/components/ui/Button.vue",
+          "completed": true,
+          "variants": ["primary", "secondary", "ghost", "outline", "icon"],
+          "sizes": ["small", "medium", "large"],
+          "description": "Botón con múltiples variantes y tamaños"
+        },
+        {
+          "id": "ui-002",
+          "name": "IconButton",
+          "fileName": "IconButton.vue",
+          "nuxtName": "UiIconButton",
+          "path": "app/components/ui/IconButton.vue",
+          "completed": false,
+          "description": "Botón de solo icono con variantes ghost y filled"
+        },
+        {
+          "id": "ui-003",
+          "name": "Card",
+          "fileName": "Card.vue",
+          "nuxtName": "UiCard",
+          "path": "app/components/ui/Card.vue",
+          "completed": true,
+          "variants": ["base", "interactive", "media"],
+          "description": "Tarjeta base, interactiva y con media"
+        },
+        {
+          "id": "ui-004",
+          "name": "Badge",
+          "fileName": "Badge.vue",
+          "nuxtName": "UiBadge",
+          "path": "app/components/ui/Badge.vue",
+          "completed": false,
+          "description": "Etiqueta de estado o categoría"
+        },
+        {
+          "id": "ui-005",
+          "name": "Avatar",
+          "fileName": "Avatar.vue",
+          "nuxtName": "UiAvatar",
+          "path": "app/components/ui/Avatar.vue",
+          "completed": false,
+          "description": "Avatar de usuario con imagen o iniciales"
+        },
+        {
+          "id": "ui-006",
+          "name": "Modal",
+          "fileName": "Modal.vue",
+          "nuxtName": "UiModal",
+          "path": "app/components/ui/Modal.vue",
+          "completed": false,
+          "description": "Modal o diálogo"
+        },
+        {
+          "id": "ui-007",
+          "name": "Toast",
+          "fileName": "Toast.vue",
+          "nuxtName": "UiToast",
+          "path": "app/components/ui/Toast.vue",
+          "completed": false,
+          "description": "Notificación toast"
+        },
+        {
+          "id": "ui-008",
+          "name": "Alert",
+          "fileName": "Alert.vue",
+          "nuxtName": "UiAlert",
+          "path": "app/components/ui/Alert.vue",
+          "completed": false,
+          "variants": ["info", "success", "warning", "error"],
+          "description": "Mensaje de alerta inline"
+        },
+        {
+          "id": "ui-009",
+          "name": "Tooltip",
+          "fileName": "Tooltip.vue",
+          "nuxtName": "UiTooltip",
+          "path": "app/components/ui/Tooltip.vue",
+          "completed": false,
+          "description": "Tooltip informativo"
+        },
+        {
+          "id": "ui-010",
+          "name": "Popover",
+          "fileName": "Popover.vue",
+          "nuxtName": "UiPopover",
+          "path": "app/components/ui/Popover.vue",
+          "completed": false,
+          "description": "Popover con contenido personalizado"
+        },
+        {
+          "id": "ui-011",
+          "name": "Drawer",
+          "fileName": "Drawer.vue",
+          "nuxtName": "UiDrawer",
+          "path": "app/components/ui/Drawer.vue",
+          "completed": false,
+          "description": "Panel lateral deslizante"
+        },
+        {
+          "id": "ui-012",
+          "name": "Tabs",
+          "fileName": "Tabs.vue",
+          "nuxtName": "UiTabs",
+          "path": "app/components/ui/Tabs.vue",
+          "completed": false,
+          "description": "Pestañas de navegación"
+        },
+        {
+          "id": "ui-013",
+          "name": "Accordion",
+          "fileName": "Accordion.vue",
+          "nuxtName": "UiAccordion",
+          "path": "app/components/ui/Accordion.vue",
+          "completed": false,
+          "description": "Acordeón expandible"
+        },
+        {
+          "id": "ui-014",
+          "name": "DataTable",
+          "fileName": "DataTable.vue",
+          "nuxtName": "UiDataTable",
+          "path": "app/components/ui/DataTable.vue",
+          "completed": false,
+          "description": "Tabla de datos con sorting y filtros"
+        },
+        {
+          "id": "ui-015",
+          "name": "Pagination",
+          "fileName": "Pagination.vue",
+          "nuxtName": "UiPagination",
+          "path": "app/components/ui/Pagination.vue",
+          "completed": false,
+          "description": "Paginación de resultados"
+        },
+        {
+          "id": "ui-016",
+          "name": "Breadcrumbs",
+          "fileName": "Breadcrumbs.vue",
+          "nuxtName": "UiBreadcrumbs",
+          "path": "app/components/ui/Breadcrumbs.vue",
+          "completed": false,
+          "description": "Migas de pan de navegación"
+        },
+        {
+          "id": "ui-017",
+          "name": "EmptyState",
+          "fileName": "EmptyState.vue",
+          "nuxtName": "UiEmptyState",
+          "path": "app/components/ui/EmptyState.vue",
+          "completed": false,
+          "description": "Estado vacío con mensaje e ilustración"
+        },
+        {
+          "id": "ui-018",
+          "name": "LoadingState",
+          "fileName": "LoadingState.vue",
+          "nuxtName": "UiLoadingState",
+          "path": "app/components/ui/LoadingState.vue",
+          "completed": false,
+          "description": "Skeleton loader para carga"
+        },
+        {
+          "id": "ui-019",
+          "name": "ProgressBar",
+          "fileName": "ProgressBar.vue",
+          "nuxtName": "UiProgressBar",
+          "path": "app/components/ui/ProgressBar.vue",
+          "completed": false,
+          "description": "Barra de progreso"
+        },
+        {
+          "id": "ui-020",
+          "name": "Stepper",
+          "fileName": "Stepper.vue",
+          "nuxtName": "UiStepper",
+          "path": "app/components/ui/Stepper.vue",
+          "completed": false,
+          "description": "Indicador de pasos en proceso"
+        },
+        {
+          "id": "ui-021",
+          "name": "DropdownMenu",
+          "fileName": "DropdownMenu.vue",
+          "nuxtName": "UiDropdownMenu",
+          "path": "app/components/ui/DropdownMenu.vue",
+          "completed": false,
+          "description": "Menú desplegable"
+        },
+        {
+          "id": "ui-022",
+          "name": "CommandPalette",
+          "fileName": "CommandPalette.vue",
+          "nuxtName": "UiCommandPalette",
+          "path": "app/components/ui/CommandPalette.vue",
+          "completed": false,
+          "description": "Paleta de comandos tipo Cmd+K"
+        },
+        {
+          "id": "ui-023",
+          "name": "KpiCard",
+          "fileName": "KpiCard.vue",
+          "nuxtName": "UiKpiCard",
+          "path": "app/components/ui/KpiCard.vue",
+          "completed": false,
+          "description": "Tarjeta de KPI/estadística"
+        },
+        {
+          "id": "ui-024",
+          "name": "HeroSection",
+          "fileName": "HeroSection.vue",
+          "nuxtName": "UiHeroSection",
+          "path": "app/components/ui/HeroSection.vue",
+          "completed": false,
+          "description": "Sección hero para landing"
+        },
+        {
+          "id": "ui-025",
+          "name": "SectionHeader",
+          "fileName": "SectionHeader.vue",
+          "nuxtName": "UiSectionHeader",
+          "path": "app/components/ui/SectionHeader.vue",
+          "completed": false,
+          "description": "Encabezado de sección"
+        },
+        {
+          "id": "ui-026",
+          "name": "Timeline",
+          "fileName": "Timeline.vue",
+          "nuxtName": "UiTimeline",
+          "path": "app/components/ui/Timeline.vue",
+          "completed": false,
+          "description": "Línea de tiempo"
+        },
+        {
+          "id": "ui-027",
+          "name": "ListItem",
+          "fileName": "ListItem.vue",
+          "nuxtName": "UiListItem",
+          "path": "app/components/ui/ListItem.vue",
+          "completed": false,
+          "description": "Item de lista reutilizable"
+        },
+        {
+          "id": "ui-028",
+          "name": "MapCheckpointCard",
+          "fileName": "MapCheckpointCard.vue",
+          "nuxtName": "UiMapCheckpointCard",
+          "path": "app/components/ui/MapCheckpointCard.vue",
+          "completed": false,
+          "description": "Tarjeta de checkpoint para mapas"
+        }
+      ]
+    },
+    "forms": {
+      "name": "Componentes de Formularios",
+      "path": "app/components/forms/",
+      "description": "Componentes de entrada de datos y formularios",
+      "components": [
+        {
+          "id": "form-001",
+          "name": "Input",
+          "fileName": "Input.vue",
+          "nuxtName": "FormsInput",
+          "path": "app/components/forms/Input.vue",
+          "completed": true,
+          "types": ["text", "email", "password", "number", "tel", "url"],
+          "description": "Campo de entrada de texto con label y validación"
+        },
+        {
+          "id": "form-002",
+          "name": "Textarea",
+          "fileName": "Textarea.vue",
+          "nuxtName": "FormsTextarea",
+          "path": "app/components/forms/Textarea.vue",
+          "completed": false,
+          "description": "Campo de texto multilínea"
+        },
+        {
+          "id": "form-003",
+          "name": "Select",
+          "fileName": "Select.vue",
+          "nuxtName": "FormsSelect",
+          "path": "app/components/forms/Select.vue",
+          "completed": true,
+          "description": "Select desplegable con opciones"
+        },
+        {
+          "id": "form-004",
+          "name": "Checkbox",
+          "fileName": "Checkbox.vue",
+          "nuxtName": "FormsCheckbox",
+          "path": "app/components/forms/Checkbox.vue",
+          "completed": true,
+          "description": "Checkbox con label y slots"
+        },
+        {
+          "id": "form-005",
+          "name": "RadioGroup",
+          "fileName": "RadioGroup.vue",
+          "nuxtName": "FormsRadioGroup",
+          "path": "app/components/forms/RadioGroup.vue",
+          "completed": true,
+          "description": "Grupo de radio buttons"
+        },
+        {
+          "id": "form-006",
+          "name": "Switch",
+          "fileName": "Switch.vue",
+          "nuxtName": "FormsSwitch",
+          "path": "app/components/forms/Switch.vue",
+          "completed": false,
+          "description": "Toggle switch on/off"
+        },
+        {
+          "id": "form-007",
+          "name": "FileUpload",
+          "fileName": "FileUpload.vue",
+          "nuxtName": "FormsFileUpload",
+          "path": "app/components/forms/FileUpload.vue",
+          "completed": true,
+          "description": "Upload de archivos con preview"
+        },
+        {
+          "id": "form-008",
+          "name": "DatePicker",
+          "fileName": "DatePicker.vue",
+          "nuxtName": "FormsDatePicker",
+          "path": "app/components/forms/DatePicker.vue",
+          "completed": false,
+          "description": "Selector de fecha/calendario"
+        },
+        {
+          "id": "form-009",
+          "name": "Tag",
+          "fileName": "Tag.vue",
+          "nuxtName": "FormsTag",
+          "path": "app/components/forms/Tag.vue",
+          "completed": false,
+          "description": "Chip o tag removible"
+        }
+      ]
+    },
+    "layout": {
+      "name": "Componentes de Layout",
+      "path": "app/components/layout/",
+      "description": "Componentes estructurales de la aplicación",
+      "components": [
+        {
+          "id": "layout-001",
+          "name": "Navbar",
+          "fileName": "Navbar.vue",
+          "nuxtName": "LayoutNavbar",
+          "path": "app/components/layout/Navbar.vue",
+          "completed": true,
+          "description": "Barra de navegación principal"
+        },
+        {
+          "id": "layout-002",
+          "name": "Footer",
+          "fileName": "Footer.vue",
+          "nuxtName": "LayoutFooter",
+          "path": "app/components/layout/Footer.vue",
+          "completed": true,
+          "description": "Footer de la aplicación"
+        },
+        {
+          "id": "layout-003",
+          "name": "Sidebar",
+          "fileName": "Sidebar.vue",
+          "nuxtName": "LayoutSidebar",
+          "path": "app/components/layout/Sidebar.vue",
+          "completed": true,
+          "description": "Sidebar de navegación lateral"
+        },
+        {
+          "id": "layout-004",
+          "name": "Header",
+          "fileName": "Header.vue",
+          "nuxtName": "LayoutHeader",
+          "path": "app/components/layout/Header.vue",
+          "completed": false,
+          "description": "Header de página interna"
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "ui": {
+      "total": 28,
+      "completed": 2,
+      "pending": 26
+    },
+    "forms": {
+      "total": 9,
+      "completed": 5,
+      "pending": 4
+    },
+    "layout": {
+      "total": 4,
+      "completed": 3,
+      "pending": 1
+    }
+  }
+}

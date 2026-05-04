@@ -24,7 +24,7 @@ Este archivo define convenciones para que la IA genere código consistente en es
    - Button, Card, Badge, Avatar, Modal, Toast, etc.
 4. **Componentes de layout** van en `app/components/layout/`:
    - Navbar, Footer, Sidebar, Header, etc.
-5. Puedes actualizar la lista de componentes en el archivo components-todo.txt
+5. Consulta el inventario completo de componentes antes de crear uno nuevoen `components.json`. Al crear un nuevo componente, actualiza el archivo JSON marcándolo como completado y documenta sus variantes/props principales.
 
 ### Nomenclatura
 1. Usar nombres simples en PascalCase, sin prefijos del proyecto.
@@ -105,6 +105,29 @@ Estas reglas facilitan:
 - Menor redundancia en nombres
 - Consistencia visual y de código
 - Mantenibilidad a largo plazo
+
+## Inventario de Componentes
+
+El archivo `components.json` contiene el inventario completo de componentes con:
+- **ID único**: Identificador del componente (ej: `ui-001`, `form-003`)
+- **Nombre**: Nombre del componente en PascalCase
+- **nuxtName**: Nombre del componente para usar en templates (ej: `UiButton`, `FormsInput`)
+- **Path**: Ruta completa del archivo
+- **Estado**: `completed: true/false` indica si está implementado
+- **Variantes/Props**: Documentación de las variantes principales
+- **Descripción**: Propósito del componente
+
+### Al crear un nuevo componente:
+1. Verifica en `components.json` si ya existe
+2. Implementa el componente siguiendo las reglas de este documento
+3. Actualiza `components.json` cambiando `completed: false` a `completed: true`
+4. Si el componente no está en el JSON, agrégalo con un ID único siguiendo el patrón de la categoría
+
+### Al consultar componentes existentes:
+1. Lee `components.json` para ver qué está disponible
+2. Verifica el `nuxtName` para usar en templates (ej: `<UiButton />`, `<FormsInput />`)
+3. Verifica el `path` para importar correctamente si es necesario
+4. Revisa las `variants` o `types` disponibles
 
 ## Ejemplos de Estructura
 
