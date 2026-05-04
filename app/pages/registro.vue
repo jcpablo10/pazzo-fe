@@ -149,7 +149,7 @@ const handleSubmit = (e: Event) => {
             </div>
             
             <!-- Terms -->
-            <Checkbox 
+            <FormsCheckbox 
               v-model="formData.acceptedTerms"
               id="terms"
               required
@@ -157,7 +157,7 @@ const handleSubmit = (e: Event) => {
               <span class="text-on-surface-variant text-sm leading-snug">
                 Acepto los <NuxtLink to="#" class="text-primary hover:underline underline-offset-4">términos y condiciones de uso</NuxtLink> y la política de privacidad.
               </span>
-            </Checkbox>
+            </FormsCheckbox>
             
             <!-- Actions -->
             <div class="pt-6 space-y-6">
