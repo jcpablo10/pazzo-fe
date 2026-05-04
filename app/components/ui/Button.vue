@@ -6,13 +6,15 @@ interface Props {
   size?: 'small' | 'medium' | 'large'
   disabled?: boolean
   rounded?: boolean
+  type?: 'button' | 'submit' | 'reset'
 }
 
 const props = withDefaults(defineProps<Props>(), {
   variant: 'primary',
   size: 'medium',
   disabled: false,
-  rounded: false
+  rounded: false,
+  type: 'button'
 })
 
 const slots = useSlots()
@@ -103,6 +105,7 @@ const buttonClasses = computed(() => {
   <button 
     :class="buttonClasses" 
     :disabled="disabled"
+    :type="type"
     class="button-pazzo"
   >
     <slot name="prepend-icon" />

@@ -29,7 +29,7 @@ Design System Components TODO
 3. ✅ Input text
 4. Textarea
 5. ✅ Select / dropdown
-6. Checkbox
+6. ✅ Checkbox
 7. ✅ Radio group
 8. Switch / toggle
 9. ✅ Form field wrapper (label, helper, error) - Integrated in form components
