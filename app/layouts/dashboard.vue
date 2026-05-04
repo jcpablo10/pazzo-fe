@@ -4,6 +4,9 @@
 
 <template>
   <div class="min-h-screen bg-background-dark">
-    <slot />
+    <!-- <layout-sidebar /> -->
+    <main class="flex-1 overflow-auto">
+      <slot />
+    </main>
   </div>
 </template>
