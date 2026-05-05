@@ -5,9 +5,9 @@
 <template>
   <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-dark/80 backdrop-blur-md px-6 lg:px-20 py-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <div class="flex items-center gap-3 text-primary">
-        <img src="../../assets/pazzo/pazzo.logo.png" alt="">
-      </div>
+      <NuxtLink to="/" class="flex items-center gap-3 text-primary hover:opacity-80 transition-opacity cursor-pointer">
+        <img src="../../assets/pazzo/pazzo.logo.png" alt="Pazzo Logo">
+      </NuxtLink>
       <nav class="hidden md:flex items-center gap-10">
         <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Ciclismo</a>
         <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Gastronomía</a>
