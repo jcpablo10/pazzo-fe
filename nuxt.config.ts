@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite'
+import { fileURLToPath } from 'node:url'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -6,6 +7,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@pinia/nuxt', '@nuxtjs/i18n'],
   css: ['~/assets/css/main.css'],
+  
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.NUXT_PUBLIC_API_URL,
+    },
+  },
+  
   app: {
     head: {
       htmlAttrs: {
@@ -27,11 +35,11 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()]
   },
   alias: {
-    '#domain': '/src/domain',
-    '#application': '/src/application',
-    '#infrastructure': '/src/infrastructure',
-    '#presentation': '/src/presentation',
-    '#shared': '/src/shared'
+    '#domain': fileURLToPath(new URL('./src/domain', import.meta.url)),
+    '#application': fileURLToPath(new URL('./src/application', import.meta.url)),
+    '#infrastructure': fileURLToPath(new URL('./src/infrastructure', import.meta.url)),
+    '#presentation': fileURLToPath(new URL('./src/presentation', import.meta.url)),
+    '#shared': fileURLToPath(new URL('./src/shared', import.meta.url))
   },
   i18n: {
     defaultLocale: 'es',

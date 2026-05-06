@@ -1,27 +1,64 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useForm } from 'vee-validate'
+import { toTypedSchema } from '@vee-validate/zod'
+import { registerSchema } from '#shared/validation'
 
-// Form state
-const formData = ref({
-  firstName: '',
-  lastName: '',
-  email: '',
-  phone: '',
-  acceptedTerms: false
+// Meta and SEO
+definePageMeta({
+  layout: 'default',
+  middleware: ['guest'],
 })
 
+// Composables
+const { register } = useAuth()
+const router = useRouter()
+
+// Form state
+const errorMessage = ref('')
+const successMessage = ref('')
+const isSubmitting = ref(false)
+
+// Setup form with Zod validation
+const { handleSubmit, errors, defineField } = useForm({
+  validationSchema: toTypedSchema(registerSchema),
+})
+
+// Define form fields
+const [firstName] = defineField('firstName')
+const [lastName] = defineField('lastName')
+const [email] = defineField('email')
+const [phone] = defineField('phone')
+const [password] = defineField('password')
+const [confirmPassword] = defineField('confirmPassword')
+const [termsAccepted] = defineField('termsAccepted')
+
 // Form submission
-const handleSubmit = (e: Event) => {
-  e.preventDefault()
-  
-  if (!formData.value.acceptedTerms) {
-    alert('Debes aceptar los términos y condiciones')
-    return
+const onSubmit = handleSubmit(async (values) => {
+  errorMessage.value = ''
+  successMessage.value = ''
+  isSubmitting.value = true
+  debugger
+  try {
+    // Note: Backend currently only accepts email and password
+    // firstName, lastName, phone, etc. can be added in a future iteration
+    await register({
+      email: values.email,
+      password: values.password,
+    })
+
+    successMessage.value = 'Cuenta creada exitosamente. Redirigiendo al login...'
+    
+    // Redirect to login after 2 seconds
+    setTimeout(() => {
+      router.push('/login')
+    }, 2000)
+  } catch (error: any) {
+    errorMessage.value = error.message || 'Error al crear la cuenta. Intenta de nuevo.'
+  } finally {
+    isSubmitting.value = false
   }
-  
-  console.log('Form submitted:', formData.value)
-  // TODO: Implement registration logic
-}
+})
+
 </script>
 
 <template>
@@ -80,84 +117,88 @@ const handleSubmit = (e: Event) => {
               Únete a la comunidad de exploradores y empieza a coleccionar aventuras.
             </p>
           </header>
+
+          <!-- Success Message -->
+          <UiAlert v-if="successMessage" variant="success" class="mb-6">
+            {{ successMessage }}
+          </UiAlert>
+
+          <!-- Error Message -->
+          <UiAlert v-if="errorMessage" variant="error" class="mb-6">
+            {{ errorMessage }}
+          </UiAlert>
           
-          <form class="space-y-6" @submit="handleSubmit">
+          <form class="space-y-6" @submit.prevent="onSubmit">
             <!-- Name Group -->
             <div class="grid grid-cols-2 gap-4">
-              <div class="space-y-2">
-                <label class="block text-xs font-bold text-secondary uppercase ml-1 tracking-wider">
-                  Nombre
-                </label>
-                <input
-                  v-model="formData.firstName"
-                  type="text"
-                  placeholder="Ej. Alex"
-                  class="form-input w-full px-4 py-3 rounded-xl"
-                  required
-                />
-              </div>
-              <div class="space-y-2">
-                <label class="block text-xs font-bold text-secondary uppercase ml-1 tracking-wider">
-                  Apellido
-                </label>
-                <input
-                  v-model="formData.lastName"
-                  type="text"
-                  placeholder="Ej. Rivera"
-                  class="form-input w-full px-4 py-3 rounded-xl"
-                  required
-                />
-              </div>
+              <FormsInput
+                v-model="firstName"
+                label="Nombre"
+                placeholder="Ej. Alex"
+                :error="errors.firstName"
+              />
+              <FormsInput
+                v-model="lastName"
+                label="Apellido"
+                placeholder="Ej. Rivera"
+                :error="errors.lastName"
+              />
             </div>
             
             <!-- Email -->
-            <div class="space-y-2">
-              <label class="block text-xs font-bold text-secondary uppercase ml-1 tracking-wider">
-                Correo Electrónico
-              </label>
-              <div class="relative">
-                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-lg">
-                  mail
-                </span>
-                <input
-                  v-model="formData.email"
-                  type="email"
-                  placeholder="tu@email.com"
-                  class="form-input w-full pl-12 pr-4 py-3 rounded-xl"
-                  required
-                />
-              </div>
-            </div>
+            <FormsInput
+              v-model="email"
+              type="email"
+              label="Correo Electrónico"
+              placeholder="tu@email.com"
+              prepend-icon="mail"
+              :error="errors.email"
+            />
             
             <!-- Phone -->
-            <div class="space-y-2">
-              <label class="block text-xs font-bold text-secondary uppercase ml-1 tracking-wider">
-                Teléfono
-              </label>
-              <div class="relative">
-                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline text-lg">
-                  call
-                </span>
-                <input
-                  v-model="formData.phone"
-                  type="tel"
-                  placeholder="+52 55 0000 0000"
-                  class="form-input w-full pl-12 pr-4 py-3 rounded-xl"
-                  required
-                />
-              </div>
-            </div>
+            <FormsInput
+              v-model="phone"
+              type="tel"
+              label="Teléfono"
+              placeholder="+52 55 0000 0000"
+              prepend-icon="call"
+              :error="errors.phone"
+            />
+
+            <!-- Password -->
+            <FormsInput
+              v-model="password"
+              type="password"
+              label="Contraseña"
+              placeholder="••••••••"
+              prepend-icon="lock"
+              show-password-toggle
+              :error="errors.password"
+            />
+
+            <!-- Confirm Password -->
+            <FormsInput
+              v-model="confirmPassword"
+              type="password"
+              label="Confirmar Contraseña"
+              placeholder="••••••••"
+              prepend-icon="lock"
+              show-password-toggle
+              :error="errors.confirmPassword"
+            />
             
             <!-- Terms -->
-            <FormsCheckbox 
-              v-model="formData.acceptedTerms"
-              id="terms"
-              required
-            >
-              <span class="text-on-surface-variant text-sm leading-snug">
-                Acepto los <NuxtLink to="#" class="text-primary hover:underline underline-offset-4">términos y condiciones de uso</NuxtLink> y la política de privacidad.
-              </span>
-            </FormsCheckbox>
+            <div class="space-y-2">
+              <FormsCheckbox 
+                v-model="termsAccepted"
+                id="terms"
+              >
+                <span class="text-on-surface-variant text-sm leading-snug">
+                  Acepto los <NuxtLink to="#" class="text-primary hover:underline underline-offset-4">términos y condiciones de uso</NuxtLink> y la política de privacidad.
+                </span>
+              </FormsCheckbox>
+              <p v-if="errors.termsAccepted" class="text-error text-xs mt-1">{{ errors.termsAccepted }}</p>
+            </div>
             
             <!-- Actions -->
             <div class="pt-6 space-y-6">
@@ -166,10 +207,13 @@ const handleSubmit = (e: Event) => {
                 variant="primary"
                 size="large"
                 class="w-full"
+                :disabled="isSubmitting"
               >
-                Registrarme
+                {{ isSubmitting ? 'Creando cuenta...' : 'Registrarme' }}
                 <template #append-icon>
-                  <span class="material-symbols-outlined">arrow_forward</span>
+                  <span class="material-symbols-outlined">
+                    {{ isSubmitting ? 'hourglass_empty' : 'arrow_forward' }}
+                  </span>
                 </template>
               </UiButton>
               
@@ -201,23 +245,6 @@ const handleSubmit = (e: Event) => {
   background: rgba(45, 77, 45, 0.4);
   backdrop-filter: blur(24px);
   border: 1px solid rgba(61, 93, 61, 0.2);
-}
-
-.form-input {
-  background: rgba(20, 30, 17, 0.6);
-  border: 1px solid rgba(61, 93, 61, 0.3);
-  color: #e8f5e8;
-  transition: border-color 0.3s ease;
-}
-
-.form-input:focus {
-  border-color: #25f425;
-  outline: none;
-  box-shadow: 0 0 0 1px rgba(37, 244, 37, 0.2);
-}
-
-.form-input::placeholder {
-  color: rgba(125, 157, 125, 0.6);
 }
 
 @keyframes fade-in {

@@ -4,7 +4,8 @@ import { ref } from 'vue'
 // Use dashboard layout
 // @ts-expect-error - Nuxt auto-import
 definePageMeta({
-  layout: 'dashboard'
+  layout: 'dashboard',
+  middleware: ['auth']
 })
 
 // Types

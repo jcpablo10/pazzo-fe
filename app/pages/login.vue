@@ -1,20 +1,47 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useForm } from 'vee-validate'
+import { toTypedSchema } from '@vee-validate/zod'
+import { loginSchema } from '#shared/validation'
+
+// Meta and SEO
+definePageMeta({
+  layout: 'default',
+  middleware: ['guest'], // Will redirect to home if already authenticated
+})
+
+// Composables
+const { login, redirectAfterLogin } = useAuth()
+const router = useRouter()
 
 // Form state
-const email = ref('')
-const password = ref('')
-const showPassword = ref(false)
+const errorMessage = ref('')
+const isSubmitting = ref(false)
+
+// Setup form with Zod validation
+const { handleSubmit, errors, defineField } = useForm({
+  validationSchema: toTypedSchema(loginSchema),
+})
+
+// Define form fields
+const [email] = defineField('email')
+const [password] = defineField('password')
 
 // Form handlers
-const handleSubmit = () => {
-  console.log('Login attempt:', { email: email.value })
-  // TODO: Implement authentication logic
-}
+const onSubmit = handleSubmit(async (values) => {
+  errorMessage.value = ''
+  isSubmitting.value = true
 
-const togglePasswordVisibility = () => {
-  showPassword.value = !showPassword.value
-}
+  try {
+    await login(values)
+    
+    // Redirect after successful login
+    redirectAfterLogin()
+  } catch (error: any) {
+    errorMessage.value = error.message || 'Error al iniciar sesión. Verifica tus credenciales.'
+  } finally {
+    isSubmitting.value = false
+  }
+})
 </script>
 
 <template>
@@ -49,37 +76,26 @@ const togglePasswordVisibility = () => {
           <p class="text-on-surface-variant text-base">Accede a tus aventuras y sellos</p>
         </header>
 
-        <form @submit.prevent="handleSubmit" class="space-y-6">
+        <!-- Error Message -->
+        <UiAlert v-if="errorMessage" variant="error" class="mb-6">
+          {{ errorMessage }}
+        </UiAlert>
+
+        <form @submit.prevent="onSubmit" class="space-y-6">
           <!-- Email Field -->
-          <div class="space-y-2">
-            <label 
-              for="email" 
-              class="text-primary uppercase text-xs font-bold tracking-wider"
-            >
-              Correo Electrónico
-            </label>
-            <div class="relative">
-              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">
-                mail
-              </span>
-              <input 
-                id="email"
-                v-model="email"
-                type="email"
-                placeholder="nombre@ejemplo.com"
-                class="w-full bg-surface-variant border border-outline rounded-xl py-3 pl-12 pr-4 text-on-background focus:ring-2 focus:ring-primary-container focus:border-transparent transition-all outline-none"
-                required
-              />
-            </div>
-          </div>
+          <FormsInput
+            v-model="email"
+            type="email"
+            label="Correo Electrónico"
+            placeholder="nombre@ejemplo.com"
+            prepend-icon="mail"
+            :error="errors.email"
+          />
 
           <!-- Password Field -->
           <div class="space-y-2">
-            <div class="flex justify-between items-center">
-              <label 
-                for="password" 
-                class="text-primary uppercase text-xs font-bold tracking-wider"
-              >
+            <div class="flex justify-between items-center mb-2">
+              <label class="block text-xs font-bold text-secondary uppercase ml-1 tracking-wider">
                 Contraseña
               </label>
               <NuxtLink 
@@ -89,37 +105,26 @@ const togglePasswordVisibility = () => {
                 ¿Olvidaste tu contraseña?
               </NuxtLink>
             </div>
-            <div class="relative">
-              <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">
-                lock
-              </span>
-              <input 
-                id="password"
-                v-model="password"
-                :type="showPassword ? 'text' : 'password'"
-                placeholder="••••••••"
-                class="w-full bg-surface-variant border border-outline rounded-xl py-3 pl-12 pr-12 text-on-background focus:ring-2 focus:ring-primary-container focus:border-transparent transition-all outline-none"
-                required
-              />
-              <button 
-                type="button"
-                @click="togglePasswordVisibility"
-                class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors"
-              >
-                <span class="material-symbols-outlined">
-                  {{ showPassword ? 'visibility_off' : 'visibility' }}
-                </span>
-              </button>
-            </div>
+            <FormsInput
+              v-model="password"
+              type="password"
+              placeholder="••••••••"
+              prepend-icon="lock"
+              show-password-toggle
+              :error="errors.password"
+            />
           </div>
 
           <!-- Submit Button -->
-          <button 
+          <UiButton
             type="submit"
-            class="w-full bg-primary-container text-on-primary-container text-lg font-bold py-4 rounded-xl shadow-[0_0_20px_rgba(37,244,37,0.3)] hover:scale-[1.02] active:scale-95 transition-all duration-200"
+            variant="primary"
+            size="large"
+            class="w-full"
+            :disabled="isSubmitting"
           >
-            Iniciar Sesión
-          </button>
+            {{ isSubmitting ? 'Iniciando sesión...' : 'Iniciar Sesión' }}
+          </UiButton>
         </form>
 
         <!-- Divider -->
