@@ -99,7 +99,7 @@ const onSubmit = handleSubmit(async (values) => {
                 Contraseña
               </label>
               <NuxtLink 
-                to="/recuperar-password" 
+                to="/recuperar-contrasena" 
                 class="text-primary text-xs hover:underline"
               >
                 ¿Olvidaste tu contraseña?
