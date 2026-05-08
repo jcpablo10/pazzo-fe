@@ -6,23 +6,32 @@ definePageMeta({
   middleware: 'guest'
 })
 
+const config = useRuntimeConfig()
 const email = ref('')
 const isSubmitting = ref(false)
 const emailSent = ref(false)
+const errorMessage = ref('')
 
 const handleSubmit = async () => {
   isSubmitting.value = true
+  errorMessage.value = ''
   
   try {
-    // TODO: Implementar lógica de recuperación de contraseña
-    console.log('Solicitud de recuperación para:', email.value)
+    const baseURL = config.public.apiUrl || 'http://localhost:8000/api/v1'
     
-    // Simulación de llamada a API
-    await new Promise(resolve => setTimeout(resolve, 1500))
+    // Call password reset API
+    await $fetch('/users/password-reset/request/', {
+      baseURL,
+      method: 'POST',
+      body: {
+        email: email.value
+      }
+    })
     
     emailSent.value = true
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error al solicitar recuperación:', error)
+    errorMessage.value = error?.data?.detail || 'Ocurrió un error al procesar tu solicitud. Inténtalo de nuevo.'
   } finally {
     isSubmitting.value = false
   }
@@ -97,6 +106,11 @@ const handleSubmit = async () => {
               <p class="text-on-surface-variant leading-relaxed">
                 No te preocupes, dinos el correo electrónico de tu cuenta y te enviaremos un enlace para restablecerla.
               </p>
+            </div>
+
+            <!-- Error Message -->
+            <div v-if="errorMessage" class="bg-error/10 border border-error/30 rounded-lg p-4">
+              <p class="text-error text-sm">{{ errorMessage }}</p>
             </div>
 
             <FormsInput
